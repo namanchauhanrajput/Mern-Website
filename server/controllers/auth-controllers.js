@@ -2,14 +2,14 @@ const User = require("../models/user-model");
 const bcrypt = require("bcryptjs");
 
 
-// const home = async (req, res) => {
-//     try {
-//         res.status(200).json({ message: "Welcome Naman Chauhan ye home hai" });
-//     } catch (error) {
-//         console.log(error);
+const home = async (req, res) => {
+    try {
+        res.status(200).json({ message: "Welcome Naman Chauhan ye home hai" });
+    } catch (error) {
+        console.log(error);
  
-//     }
-// };
+    }
+};
 
 //resister or signup part========================================
 
@@ -88,7 +88,7 @@ const user = async (req,res) => {
   }
 }
 
-module.exports = { register, login, user};
+module.exports = { home, register, login, user};
 
 // home,
 
