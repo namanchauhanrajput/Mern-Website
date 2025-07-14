@@ -8,6 +8,8 @@ const validate = require("../middlewares/validate-middleware");
 const authMiddleware = require("../middlewares/auth-middleware");
 
 
+router.route("/home").get(authController.home);
+
 // ✅ Register route using .route().post()
 
 router.route("/register")
