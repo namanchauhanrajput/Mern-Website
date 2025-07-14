@@ -8,7 +8,7 @@ export const AdminContacts = () => {
 
     const getContacts = useCallback(async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/admin/contacts", {
+            const response = await fetch("https://mern-website-five.vercel.app/admin/contacts", {
                 headers: {
                     Authorization: authorizationToken,
                 },
