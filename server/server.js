@@ -21,6 +21,10 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/form", contactRouter);
 
+
+app.get("/", (req, res) => {
+  res.send("Server is working ✅");
+});
 // admin route--
 app.use("/api/admin", adminRoute);
 
