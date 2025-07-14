@@ -26,7 +26,37 @@ export const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/register`, {
+            const response = await fetch(const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await fetch("https://mern-website-yteg.vercel.app/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+
+    const res_data = await response.json();
+    console.log("res from server", res_data.exteraDetails);
+
+    if (response.ok) {
+      storeTokenInLS(res_data.token);
+      console.log("res from server", res_data);
+
+      setUser({ username: "", email: "", phone: "", gender: "", dob: "", password: "" });
+      toast.success("Register Successful");
+      navigate("/");
+    } else {
+      toast.error(res_data.exteraDetails ? res_data.exteraDetails : res_data.message);
+    }
+
+  } catch (error) {
+    console.log("register error:", error);
+    toast.error("Server error during registration");
+  }
+};
+ {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
