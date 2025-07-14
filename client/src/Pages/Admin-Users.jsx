@@ -8,7 +8,7 @@ export const AdminUsers = () => {
 
     const getAllUsersData = useCallback(async () => {
         try {
-            const response = await fetch("https://mern-website-five.vercel.app/api/admin/users", {
+            const response = await fetch("https://mern-website-five.vercel.app/admin/users", {
                 method: "GET",
                 headers: {
                     Authorization: authorizationToken,
