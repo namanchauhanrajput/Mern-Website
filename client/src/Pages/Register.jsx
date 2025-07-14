@@ -29,10 +29,9 @@ export const Register = () => {
             const response = await fetch(const handleSubmit = async (e) => {
   e.preventDefault();
 
-                 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
   try {
-    const response = await fetch(`${BACKEND_URL}/api/register`, {
-        console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
+    const response = await fetch("http://localhost:5000/api/auth/register" {
+        
 
       method: "POST",
       headers: {
