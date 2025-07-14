@@ -28,8 +28,11 @@ export const Register = () => {
         try {
             const response = await fetch(const handleSubmit = async (e) => {
   e.preventDefault();
+
+                 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
   try {
-    const response = await fetch("https://mern-website-yteg.vercel.app/api/register", {
+    const response = await fetch(`${BACKEND_URL}/api/register`,{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
