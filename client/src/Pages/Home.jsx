@@ -25,7 +25,7 @@ export const Home = () => {
                             <div className="flex flex-row gap-4 justify-center md:justify-start">
                                 <a href="/contact">
                                     <button className="bg-purple-600 text-white px-6 py-3 rounded-xl hover:bg-purple-700 transition shadow-md">
-                                        Contect Now
+                                        Contact Now
                                     </button>
                                 </a>
                                 <a href="/about">
@@ -109,7 +109,7 @@ export const Home = () => {
                         <div className="flex flex-row gap-4 justify-center md:justify-start">
                             <a href="/contact">
                                 <button className="bg-purple-600 text-white px-6 py-3 rounded-xl hover:bg-purple-700 transition shadow-md">
-                                    Contect Now
+                                    Contact Now
                                 </button>
                             </a>
                             <a href="/about">
