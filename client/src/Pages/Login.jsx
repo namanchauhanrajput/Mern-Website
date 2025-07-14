@@ -23,10 +23,8 @@ export const Login = () => {
       const response = await fetch(const handleSubmit = async (e) => {
   e.preventDefault();
 
-         const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-
   try {
-    const response = await fetch(`${BACKEND_URL}/api/login`, {
+    const response = await fetch("http://localhost:5000/api/auth/login" {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
