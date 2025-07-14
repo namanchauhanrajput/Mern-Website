@@ -30,9 +30,10 @@ export const Register = () => {
   e.preventDefault();
 
                  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-
   try {
-    const response = await fetch(`${BACKEND_URL}/api/register`,{
+    const response = await fetch(`${BACKEND_URL}/api/register`, {
+        console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
+
       method: "POST",
       headers: {
         "Content-Type": "application/json",
