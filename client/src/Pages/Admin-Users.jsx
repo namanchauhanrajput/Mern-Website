@@ -3,17 +3,17 @@ import { useAuth } from "../store/auth";
 import { Link } from "react-router-dom";
 
 export const AdminUsers = () => {
-    const [users, setUsers] = useState([]);
-    const { authorizationToken } = useAuth();
+  const [users, setUsers] = useState([]);
+  const { authorizationToken } = useAuth();
 
-    const getAllUsersData = async () => {
-  try {
-    const response = await fetch("https://mern-website-1-4w0c.onrender.com/api/admin/users", {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${authorizationToken}`,
-      },
-    });
+  const getAllUsersData = async () => {
+    try {
+      const response = await fetch("https://mern-website-1-4w0c.onrender.com/api/admin/users", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${authorizationToken}`,
+        },
+      });
 
 
             const data = await response.json();
