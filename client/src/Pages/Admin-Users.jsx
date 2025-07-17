@@ -8,7 +8,7 @@ export const AdminUsers = () => {
 
     const getAllUsersData = useCallback(async () => {
         try {
-            const response = await fetch("https://mern-website-five.vercel.app/admin/users", {
+            const response = await fetch("https://mern-website-1-4w0c.onrender.com/admin/users", {
                 method: "GET",
                 headers: {
                     Authorization: authorizationToken,
@@ -23,7 +23,7 @@ export const AdminUsers = () => {
     }, [authorizationToken]);
 
     const deleteUser = async (id) => {
-        const response = await fetch(`http://localhost:5000/api/admin/users/delete/${id}`, {
+        const response = await fetch(`https://mern-website-1-4w0c.onrender.com/api/admin/users/delete/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: authorizationToken,
