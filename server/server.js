@@ -10,7 +10,7 @@ require("dotenv").config();
 
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://mern-website-25i1.vercel.app",
   method: "GET, POST, DELETE, PUT, PATCH, HEAD",
   Credentials: true,
 }
