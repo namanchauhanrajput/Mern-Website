@@ -8,7 +8,7 @@ export const AdminContacts = () => {
 
     const getContacts = useCallback(async () => {
         try {
-            const response = await fetch("https://mern-website-five.vercel.app/admin/contacts", {
+            const response = await fetch("https://mern-website-1-4w0c.onrender.com/admin/contacts", {
                 headers: {
                     Authorization: authorizationToken,
                 },
@@ -29,7 +29,7 @@ export const AdminContacts = () => {
 
     const deleteContact = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/admin/contacts/delete/${id}`, {
+            const response = await fetch(`https://mern-website-1-4w0c.onrender.com/api/admin/contacts/delete/${id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: authorizationToken,
