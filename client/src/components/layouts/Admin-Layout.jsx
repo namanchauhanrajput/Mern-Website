@@ -5,9 +5,9 @@ import { MdPermContactCalendar, MdHome } from "react-icons/md";
 import { Menu, X } from "lucide-react";
 import { useAuth } from "../../store/auth";
 
-export const AdminLayout = () => {
-    const { user, isLoading } = useAuth();
-    console.log("user admin", user);
+// export const AdminLayout = () => {
+//     const { user, isLoading } = useAuth();
+//     console.log("user admin", user);
     
     const [isSidebarOpen, setIsSidebarOpen] = useState(false); // ✅ moved here
 
@@ -15,13 +15,13 @@ export const AdminLayout = () => {
 
     // ✅ Now this conditional render comes after all hooks
 
-    if(isLoading){
-        return <h1>Loading ...</h1>;
-    }
+    // if(isLoading){
+    //     return <h1>Loading ...</h1>;
+    // }
     
-    if (!user.isAdmin) {
-        return <Navigate to="/" />;
-    }
+    // if (!user.isAdmin) {
+    //     return <Navigate to="/" />;
+    // }
 
     return (
         <div className="flex flex-col h-[81.5vh] overflow-hidden">
