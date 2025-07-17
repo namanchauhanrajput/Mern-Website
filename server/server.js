@@ -8,38 +8,34 @@ const connectDB = require("./config/db.js");
 const errorMiddleware = require("./middlewares/error-middleware.js");
 require("dotenv").config();
 
-
 const corsOptions = {
-  origin: "https://mern-frontend-lysp.onrender.com/",
-  method: "GET, POST, DELETE, PUT, PATCH, HEAD",
-  Credentials: true,
-}
+  origin: [
+    "http://localhost:3000",
+    "https://mern-frontend-lysp.onrender.com",
+    "https://mern-website-25i1.vercel.app"
+  ],
+  methods: "GET,POST,DELETE,PUT,PATCH,HEAD",
+  credentials: true,
+};
 
 app.use(cors(corsOptions));
-
 app.use(express.json());
+
+// Routes
 app.use("/api/auth", authRoute);
 app.use("/api/form", contactRouter);
+app.use("/api/admin", adminRoute);
 
-
+// Test Route
 app.get("/", (req, res) => {
   res.send("Server is working ✅");
 });
-// admin route--
-app.use("/api/admin", adminRoute);
 
-
-
+// DB and Middlewares
 connectDB();
-
 app.use(errorMiddleware);
 
-
-// app.get("/kishan", (req, res) => {
-//   res.status(200).send("Welcome Naman Chauhan rajput111444");
-// });
-
-
+// Server Listen
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running at port: ${PORT}`);
