@@ -24,7 +24,7 @@ export const Login = () => {
   e.preventDefault();
 
   try {
-    const response = await fetch("https://mern-website-five.vercel.app/api/auth/login" {
+    const response = await fetch("https://mern-website-1-4w0c.onrender.com/api/auth/login" {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
