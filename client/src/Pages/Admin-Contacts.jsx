@@ -9,8 +9,7 @@ export const AdminContacts = () => {
     const getContacts = useCallback(async () => {
         try {
             const response = await fetch("https://mern-website-1-4w0c.onrender.com/api/admin/contacts", {
-                method: "GET",
-                headers: {
+                     headers: {
                     Authorization: authorizationToken,
                 },
             });
