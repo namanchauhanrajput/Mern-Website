@@ -37,7 +37,7 @@ export const Contact = () => {
         console.log(contact);
 
         try {
-            const response = await fetch(`https://mern-website-five.vercel.app/api/form/contact`, {
+            const response = await fetch(`https://mern-website-1-4w0c.onrender.com/api/form/contact`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
