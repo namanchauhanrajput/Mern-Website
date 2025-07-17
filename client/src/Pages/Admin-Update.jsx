@@ -20,7 +20,7 @@ export const AdminUpdate = () => {
     useEffect(() => {
         const getUserData = async () => {
             try {
-                const response = await fetch(`https://mern-website-five.vercel.app/admin/users/${id}`, {
+                const response = await fetch(`https://mern-website-1-4w0c.onrender.com/admin/users/${id}`, {
                     headers: {
                         Authorization: authorizationToken,
                     },
@@ -44,7 +44,7 @@ export const AdminUpdate = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/api/admin/users/update${id}`, {
+            const response = await fetch(`https://mern-website-1-4w0c.onrender.com/api/admin/users/update${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
