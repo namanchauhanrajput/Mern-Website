@@ -6,14 +6,15 @@ export const AdminUsers = () => {
     const [users, setUsers] = useState([]);
     const { authorizationToken } = useAuth();
 
-    const getAllUsersData = useCallback(async () => {
-        try {
-            const response = await fetch("https://mern-website-1-4w0c.onrender.com/admin/users", {
-                method: "GET",
-                headers: {
-                    Authorization: authorizationToken,
-                },
-            });
+    const getAllUsersData = async () => {
+  try {
+    const response = await fetch("https://mern-website-1-4w0c.onrender.com/api/admin/users", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${authorizationToken}`,
+      },
+    });
+
 
             const data = await response.json();
             setUsers(data);
