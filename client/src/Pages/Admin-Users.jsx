@@ -7,9 +7,12 @@ export const AdminUsers = () => {
   const { authorizationToken } = useAuth();
 
 const response = await fetch("https://mern-website-1-4w0c.onrender.com/api/admin/users", {
+  // headers: {
+  //   Authorization: `Bearer ${authorizationToken}`
+  // }
   headers: {
-    Authorization: `Bearer ${authorizationToken}`
-  }
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+},
 });
 
   
