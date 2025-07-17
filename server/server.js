@@ -10,7 +10,7 @@ require("dotenv").config();
 
 
 const corsOptions = {
-  origin: "https://mern-website-25i1.vercel.app",
+  origin: "https://mern-frontend-lysp.onrender.com/",
   method: "GET, POST, DELETE, PUT, PATCH, HEAD",
   Credentials: true,
 }
