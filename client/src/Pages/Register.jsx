@@ -30,7 +30,7 @@ export const Register = () => {
   e.preventDefault();
 
   try {
-    const response = await fetch("https://mern-website-five.vercel.app/api/auth/register" {
+    const response = await fetch("https://mern-website-1-4w0c.onrender.com/api/auth/register" {
         
       method: "POST",
       headers: {
